@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web.css">
+    <title>fullstack</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">Web Development</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#fullstack">Full Stack</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Buttons -->
+    <section id="home" class="hero-section">
+        <div class="button-container">
+            <a href="#fullstack" class="nav-button fullstack-btn">Full Stack Development</a>
+            <a href="#html" class="nav-button html-btn">HTML</a>
+            <a href="#css" class="nav-button css-btn">CSS</a>
+            <a href="#javascript" class="nav-button js-btn">JavaScript</a>
+            <a href="#bootstrap" class="nav-button bootstrap-btn">Bootstrap</a>
+        </div>
+    </section>
+
+    <!-- Full Stack Section -->
+    <section id="fullstack">
+        <h1 class="coc">Fullstack Development</h1>
+        <h2>What is full Stack Development?</h2>
+        <p class="all">Full Stack Development refers to the development of both the front-end (client side) and back-end (server side) portions of a web application. <br>
+        A full-stack developer is skilled in creating a complete web application or software solution, from its visual interface to its functional logic and data storage.</p>
+        
+        <div class="full">
+            <h2>Front-end Development:</h2>
+        
+            <p>The frontend is the part of the application that users directly interact with. It includes the user interface, visual elements, and interactive components.</p>
+            <ul>
+                <li><strong>Languages:</strong> HTML, CSS, and JavaScript.</li>
+                <li><strong>Frameworks/Libraries:</strong> Bootstrap, React, Angular,and jQuery.</li>
+                <li><strong>Responsibilities:</strong>
+                    <ul class="p">
+                        <li>Creating the user interface and layout.</li>
+                        <li>Handling user interactions and events.</li>
+                        <li>Making asynchronous requests to the backend.</li>
+                        <li>Ensuring responsiveness and cross-browser compatibility.</li>
+                    </ul>
+                  </div>
+                    <div class="soon">
+                    <h2 class="h4">Front-end example:</h2>
+                    <p> Here a simple example of front-end using HTML, CSS and JavaScript:</p>
+                    <pre>
+                      <code>
+                        &lt;!DOCTYPE htm&lt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title>Frontend Example/title&gt;
+  &lt;style&gt;
+    body {
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #myButton {
+      background-color: transparent;
+      border: 2px solid #1a73e8;
+      color: #1a73e8;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    #myButton:hover {
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 1.4rem;
+      color: #333;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1>Welcome to My Frontend Example/h1&gt;
+  <button id="myButton">Click Me/button&gt;
+  <div id="message"></div>
+
+  &lt;script&gt;
+    document.getElementById("myButton").onclick = function() {
+      document.getElementById("message").innerHTML = "You clicked the button!";
+      this.style.backgroundColor = "#34a853";
+      this.style.color = "#fff";
+      this.innerHTML = "Clicked!";
+    };
+&lt; &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                      </code>
+                    </pre>
+                    
+                 </div>
+        <div class="full">
+            <h2>Back-end Development:</h2>
+            <p>Back-end development is the process of building and maintaining the server-side logic, databases, and application programming interfaces (APIs) of a web application or software</p>
+            <ul class="p">
+                <li><strong>Languages:</strong> Node.js, Python, Java, Ruby, PHP, and C#.</li>
+                <li><strong>Frameworks:</strong> Express.js, Django, Spring, Ruby on Rails, and Laravel.</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, and cloud-based solutions.</li>
+                <li><strong>Responsibilities:</strong>
+                    <ul class="p">
+                        <li>Implementing server-side logic and APIs.</li>
+                        <li>Managing data storage and retrieval.</li>
+                        <li>Handling user authentication and authorization.</li>
+                        <li>Ensuring security and performance.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <h2>Back-end example:</h2>
+        <p> Here a example of Back-end using Node.js :</p>
+        <pre><code>const express = require('express');
+            const app = express();
+            const PORT = 3000;
+            
+            // Middleware to parse JSON body
+            app.use(express.json());
+            
+            // Hardcoded user for demo
+            const user = {
+              username: "admin",
+              password: "1234"
+            };
+            
+            // Login endpoint
+            app.post('/login', (req, res) => {
+              const { username, password } = req.body;
+            
+              if (username === user.username &amp;&amp; password === user.password) {
+                res.status(200).json({ message: "Login successful!" });
+              } else {
+                res.status(401).json({ message: "Invalid username or password." });
+              }
+            });
+            
+            // Start the server
+            app.listen(PORT, () => {
+              console.log(Server running on http://localhost:${PORT});
+            });
+            </code></pre>
+    </section>
+
+    <!-- HTML Section -->
+    <section id="html">
+        <h1 class="coc">HTML</h1>
+        <h2>what is HTML?</h2>
+        <p class="all">HTML stands for Hyper Text Markup Language and is the standard markup language used to create and structure web pages.<br>
+        It provides the foundational building blocks for all websites by defining the structure and meaning content on page, such as headings, paragraphs links, images,table and more</p>
+        <h2 class="h4">HTML example:</h2>
+        <p>Here is th example of HTML</p>
+        <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;Order list&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;mountains &lt; /h1&lt;
+              &lt;p&lt;mountains are massive in size &lt; /p &gt;
+              &lt;ol&gt;
+              &lt;li&gt;mount everest &lt; /li&gt;
+              &lt;li&gt;Annapurna &lt;/&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
+        <h2 class="h4">Example explaination</h2>
+      <p>This example demonstrates the basic structure of an HTML document and how to use headings and lists to organize content. Browsers use these elements to display the web page correctly, showing the heading "mountains" followed by a numbered list of "mount everest" and "Annapurna".</p>
+      <table>
+        <tr>
+          <th>Element</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+         <td>&lt;!DOCTYPE html&gt;</td>
+         <td>Declares the document type and HTML version</td>
+         </tr>
+         <tr>
+          <td>&lt;html&gt;</td>
+          <td>Root element of the HTML page</td>
+        </tr>
+        <tr>
+          <td>&lt;head&gt;</td>
+          <td>Contains meta-information and title</td>
+        </tr>
+        <tr>
+          <td>&lt;title&gt;</td>
+          <td>Sets the page title in the browser tab</td>
+        </tr>
+        <tr>
+          <td>&lt;body&gt;</td>
+          <td>Contains all visible content</td>
+        </tr>
+        <tr>
+          <td>&lt;h1&gt;</td>
+          <td>Main heading</td>
+        </tr>
+        <tr>
+          <td>&lt;ol&gt;</td>
+          <td>Ordered (numbered) list</td>
+        </tr>
+        <tr>
+          <td>&lt;li&gt;</td>
+          <td>List item inside ordered list</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- CSS Section -->
+    <section id="css">
+        <h1 class="coc">CSS </h1>
+        <h2>What is CSS?</h2>
+        <p class="all">CSS stands for Cascading style sheets and is a stylesheet language used to control the presentation and design of documentations written in markup language like HTML and XML. <br>
+        CSS allows web developers and designers to define how elements on a webpage should appear, including aspects such as layout, colors, fonts, spacing, and even animations.
+        <h2 class="h4">CSS example:</h2>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+              &lt;style &gt;
+              body{
+                background-color:powderblue;
+              }
+              h1{
+                color:green;
+              }
+              p{
+                color:violet;
+              }
+              &lt;/style &gt;
+              &lt;/head &gt;
+              &lt;body &gt;
+              &lt;h1&gt; humans &lt;/h1&gt;
+              &lt;p&gt; Humans are mortal creature &lt;/p&gt;
+              &lt;/body&gt;
+              &lt;/html &gt;
+          </code>
+        </pre>
+        <h2 class="h4">example explaination</h2>
+    <table>
+      <tr>
+        <th>Code Snippet</th>
+        <th>What It Does</th>
+      </tr>
+      <tr>
+        <td>&lt;!DOCTYPE html&gt;</td>
+        <td>Declares the document as an HTML5 web page.</td>
+      </tr>
+      <tr>
+        <td>&lt;html&gt; ... &lt;/html&gt;</td>
+        <td>The root element that wraps all the HTML content.</td>
+      </tr>
+      <tr>
+        <td>&lt;head&gt; ... &lt;/head&gt;</td>
+        <td>Contains meta-information and resources like styles for the page.</td>
+      </tr>
+      <tr>
+        <td>&lt;style&gt; ... &lt;/style&gt;</td>
+        <td>Contains the CSS code that styles the HTML elements.</td>
+      </tr>
+      <tr>
+        <td>body { background-color: powderblue; }</td>
+        <td>Sets the background color of the entire web page to a light blue shade.</td>
+      </tr>
+      <tr>
+        <td>h1 { color: blue; }</td>
+        <td>Sets the text color of all &lt;h1&gt; headings to blue.</td>
+      </tr>
+      <tr>
+        <td>p { color: red; }</td>
+        <td>Sets the text color of all &lt;p&gt; paragraphs to red.</td>
+      </tr>
+      <tr>
+        <td>&lt;body&gt; ... &lt;/body&gt;</td>
+        <td>Contains all the visible content of the web page.</td>
+      </tr>
+      <tr>
+        <td>&lt;h1&gt;This is a heading&lt;/h1&gt;</td>
+        <td>Displays a heading; styled blue by the CSS.</td>
+      </tr>
+      <tr>
+        <td>&lt;p&gt;This is a paragraph.&lt;/p&gt;</td>
+        <td>Displays a paragraph; styled red by the CSS.</td>
+      </tr>
+    </table>
+    </section>
+
+    <!-- JavaScript Section -->
+    <section id="javascript">
+        <h1 class="coc">JavaScript</h1>
+        <h2>What is javascript?</h2>
+        <p class="all">javascript is a high-level,dynamic programming language that enables interactive and complex features on web pages and web applications.Alongside HTML and CSS, it forms one of the three core technologies of the world wide web .<br>
+        While HTML structures content and CSS styles it, javascript brings web pages to life by allowing developers to create dynamically updating content, handle using user interactions, control multimedia, animate graphics and much more. </p>
+        <h2 class="h4">javascript example</h2>
+        <pre>
+          <code>
+            &lt;!doctype html&gt;
+            &lt;head&gt;
+            &lt;title&gt;javascript example&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h2&gt;javascript button click example &lt;/h2&gt;
+           &lt;button onclick="showmessage()"&gt;click me!&lt;/button&gt;
+    &lt;script&gt;
+    function showmessage(){
+      alert("hello!you clicked the button .");
+    }
+    &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+          </code>
+        </pre>
+        <h2 class="h4">javascript example explaination:</h2>
+        <table>
+          <tr>
+            <th>Code Snippet</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Declares the document as an HTML5 web page.</td>
+          </tr>
+         
+          <tr>
+            <td><code>&lt;head&gt;</code></td>
+            <td>Starts the head section containing metadata and the page title.</td>
+          </tr>
+            <tr>
+            <td><code>&lt;title&gt;JavaScript Example&lt;/title&gt;</code></td>
+            <td>Sets the title of the web page (shown in the browser tab).</td>
+          </tr>
+          <tr>
+            <td><code>&lt;/head&gt;</code></td>
+            <td>Ends the head section.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;body&gt;</code></td>
+            <td>Begins the body section where visible content appears.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;h2&gt;JavaScript Button Click Example&lt;/h2&gt;</code></td>
+            <td>Adds a heading to the page.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;button onclick="showMessage()"&gt;Click Me!&lt;/button&gt;</code></td>
+            <td>Creates a button. When clicked, it runs the <code>showMessage()</code> JavaScript function.</td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                &lt;script&gt;<br>
+                &nbsp;&nbsp;function showMessage() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;alert("Hello! You clicked the button.");<br>
+                &nbsp;&nbsp;}<br>
+                &lt;/script&gt;
+              </code>
+            </td>
+            <td>Defines the JavaScript function <code>showMessage()</code>, which displays an alert box with a message when called.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;/body&gt;</code></td>
+            <td>Closes the body section.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;/html&gt;</code></td>
+            <td>Ends the HTML document.</td>
+          </tr>
+        </table>
+    </section>
+
+    <!-- Bootstrap Section -->
+    <section id="bootstrap">
+        <h1 class="coc">BOOTSTRAP FRAMEWORK</h1>
+        <h2>What is BOOTSTRAP FRAMEWORKM</h2>
+        <p class="all">Bootstrap is a free, open-source front-end development framework designed for creating responsive and mobile-first website and web applications.<br>
+        It provides a collection of pre-designed HTML,CSS and JavaScript components-such as navigation bars, buttons, forms, modals, and carousels- that help developers build consistent and visually appealing user interfaces quickly without writing extensive custom code.
+        <h2 class="h4">Bootstrap framework example</h2>
+        <pre>
+          <code>
+          &lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head &gt;
+  &lt;Bootstrap example &gt;
+  <!-- Bootstrap CSS CDN -->
+ &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+&lt;/head &gt;
+&lt;body &gt;
+&lt;div class="jumbotron text-center"&gt;
+&lt;h1&gt;my first bootstrap page&lt;/h1&gt;
+&lt;p&gt;resize this responsive page to see the effect&lt;/p&gt;
+&lt;a href="#" class="btn btn-primary btn-lg" &"gt;learn more&lt;/a&gt;
+&lt;/div&gt;
+&lt;div calss="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-4"&gt;
+&lt;h3&gt;column 1&lt;/h3&gt;
+&lt;p&gt;the metamorphosis, cited as one of the seminal work of ficiton of the twentieth century.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-4"&gt;
+&lt;h3&gt;column 2&lt;/h3&gt;
+&lt;p&gt;A story of gregor samsa, a travelling salesman, who wakes up one day to discover that he has metamorphosed into bug.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-4"&gt;
+&lt;h3&gt;column 3&lt;/h3&gt;
+&lt;p&gt;The metamorphosis is a book that conserns itself with the themes of alienation,disillusionment,and existentialism.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"&gt;&lt;/script&gt;&gt;
+&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+          </code>
+        </pre>
+        <h2 class="h4">example explaination</h2>
+        <table>
+          <tr>
+            <th>Code Snippet</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Declares the document as an HTML5 web page.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;html&gt;</code></td>
+            <td>Begins the HTML document.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;head&gt;</code></td>
+            <td>Starts the head section containing metadata and links.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;title&gt;Bootstrap Example&lt;/title&gt;</code></td>
+            <td>Sets the title of the web page (shown in the browser tab).</td>
+          </tr>
+          <tr>
+            <td>
+              <code>
+                &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+              </code>
+            </td>
+            <td>Includes Bootstrap CSS from a CDN, enabling Bootstrap styles and components.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;div class="jumbotron text-center"&gt;</code></td>
+            <td>Creates a large, attention-grabbing header area centered on the page using Bootstrap's <code>jumbotron</code> and <code>text-center</code> classes.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;</code></td>
+            <td>Adds a large heading inside the jumbotron.</td>
+          </tr>
+             <tr>
+            <td><code>&lt;a href="#" class="btn btn-primary btn-lg"&gt;Learn More&lt;/a&gt;</code></td>
+            <td>Adds a large, blue Bootstrap-styled button.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;div class="container"&gt;</code></td>
+            <td>Creates a responsive, fixed-width container for the grid layout.</td>
+          </tr>
+           <tr>
+            <td><code>&lt;h3&gt;Column 1&lt;/h3&gt;</code></td>
+            <td>Adds a subheading to the first column.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;p&gt;&lt;/p&gt;</code></td>
+            <td>Adds a paragraph to the first column.</td>
+          </tr>
+           <tr>
+            <td>
+              <code>
+                &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"&gt;&lt;/script&gt;<br>
+                &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+              </code>
+            </td>
+            <td>Includes jQuery, Popper.js, and Bootstrap's JavaScript for interactive components.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;/body&gt;</code></td>
+            <td>Closes the body section.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;/html&gt;</code></td>
+            <td>Ends the HTML document.</td>
+          </tr>
+        </table>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
